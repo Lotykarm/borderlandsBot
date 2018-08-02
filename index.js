@@ -3,7 +3,6 @@ const each = require('foreach');
 const random = require('random');
 
 const border = require('./border.js');
-
 const conf = require('./config.json');
 
 // create a new Discord client
