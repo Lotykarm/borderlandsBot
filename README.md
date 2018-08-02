@@ -8,7 +8,7 @@ Rareté allant de vert(supérieure) à orange(légendaire)
 
 Commande:
 
-        !b new rangDuPersonnage
+    !b new rangDuPersonnage
 
 
 
