@@ -6,8 +6,7 @@ Donne le nombres d'améliorations de l'arme mais pas les améliorations
 Rareté allant de vert(supérieure) à orange(légendaire)
 
 
-
-    Commande:
+Commande:
 
         !b new rangDuPersonnage
 
