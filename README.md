@@ -13,12 +13,12 @@ Commande:
 
 Rang du personnage
 
-    Rang          Commande <br>
-    Novice            n <br>
-    Aguerri           a <br>
-    Vétéran           v <br>
-    Héroïque          h <br>
-    Légendaire        l <br>
+    Rang          Commande 
+    Novice            n 
+    Aguerri           a 
+    Vétéran           v 
+    Héroïque          h 
+    Légendaire        l 
 
 
 Futures améliorations:
