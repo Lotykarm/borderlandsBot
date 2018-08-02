@@ -1,0 +1,27 @@
+{
+  "name": "borderlands",
+  "version": "1.0.0",
+  "description": "\"# borderlandsBot\"",
+  "main": "index.js",
+  "dependencies": {
+    "border": "^1.0.0",
+    "foreach": "^2.0.5",
+    "discord.js": "^11.3.2",
+    "random": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lotykarm/borderlandsBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lotykarm/borderlandsBot/issues"
+  },
+  "homepage": "https://github.com/Lotykarm/borderlandsBot#readme"
+}
