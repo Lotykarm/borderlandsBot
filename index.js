@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const each = require('foreach');
 const random = require('random');
 
-const border = require('border');
+const border = require('./border.js');
 
 const conf = require('./config.json');
 
