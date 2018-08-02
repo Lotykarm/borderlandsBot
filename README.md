@@ -11,6 +11,15 @@ Commande:
     !b new rangDuPersonnage
 
 
+Rang du personnage
+
+    Rang          Commande <br>
+    Novice            n <br>
+    Aguerri           a <br>
+    Vétéran           v <br>
+    Héroïque          h <br>
+    Légendaire        l <br>
+
 
 Futures améliorations:
 
