@@ -22,29 +22,41 @@ client.on('message', message => {
 
 
     if (/!b/.test(message.content)) {
+
         var msgArray = message.content.split(" ");
         var command = msgArray[1];
         var charRank = msgArray[2];
-        var armeQualite = msgArray[3];
+        var armeQualite = false;
+        if (msgArray[3]) {
+            armeQualite = msgArray[3];
+        }
 
+
+        var arme;
         if (command = "new") {
 
             if (charRank == "n" || charRank == "a" || charRank == "v" || charRank == "h" || charRank == "l") {
 
-                var arme;
+                arme = border.newArme(charRank);
 
-                if (!armeQualite) {
 
-                    arme = border.newArme(charRank);
+                    if (armeQualite != false && armeQualite !== "vert" && armeQualite !== "bleu" && armeQualite !== "violet" && armeQualite !== "orange") {
+                        message.channel.send("Mauvaise qualité !" +
+                            "Les qualités disponibles sont:" +
+                            "\n" +
+                            "vert" +
+                            "\n" +
+                            "bleu" +
+                            "\n" +
+                            "violet" +
+                            "\n" +
+                            "orange \n\n" +
+                            "Une qualité aléatoire a été choisie");
+                    } else {
+                        arme = border.newArme(charRank, armeQualite);
 
-                    // message.channel.send(arme.type);
-                    // message.channel.send(arme.qualite);
+                    }
 
-                } else {
-
-                    arme = border.newArme(charRank, armeQualite);
-
-                }
                 message.channel.send("Vous avez trouvé un " + arme.string.fabricant + " !!" +
                     "\n" +
                     "Qualité : " + arme.string.qualite +

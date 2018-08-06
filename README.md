@@ -3,25 +3,33 @@
 génère une arme aléatoire pour le jdr borderlands savage world <br>
 Donne le nombres d'améliorations de l'arme mais pas les améliorations
 
-Rareté allant de vert(supérieure) à orange(légendaire)
+Qualité allant de vert(supérieure) à orange(légendaire)
 
 
 Commande:
 
-    !b new rangDuPersonnage
+    !b new rangDuPersonnage qualiteDeArme
 
 
 Rang du personnage
 
-    Rang          Commande 
-    Novice            n 
-    Aguerri           a 
-    Vétéran           v 
-    Héroïque          h 
-    Légendaire        l 
+    Rang          Commande
+    Novice            n
+    Aguerri           a
+    Vétéran           v
+    Héroïque          h
+    Légendaire        l
 
+Qualité de l'arme
+
+!!Optionel!!
+La qualité est  aléatoire par défault
+
+    vert
+    bleu
+    violet
+    orange
 
 Futures améliorations:
 
-    possibilité de choisir la Rareté
     génération des améliorations

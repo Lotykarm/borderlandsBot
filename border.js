@@ -2,7 +2,7 @@ const random = require('random');
 const each = require('foreach');
 const tables = require('./tables.json');
 
-exports.newArme = function(charRank, armeQualite = false) {
+exports.newArme = function(charRank, armeQualite) {
     var arme = {};
 
     //arme.string => le texte à display
@@ -35,7 +35,7 @@ exports.newArme = function(charRank, armeQualite = false) {
         });
 
     } else {
-        arme.string.qualite = tables[armeQualite].string;
+        arme.string.qualite = tables.qualite[armeQualite].string;
         arme.value.qualite = armeQualite;
 
     }
