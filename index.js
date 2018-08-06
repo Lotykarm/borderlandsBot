@@ -25,15 +25,26 @@ client.on('message', message => {
         var msgArray = message.content.split(" ");
         var command = msgArray[1];
         var charRank = msgArray[2];
+        var armeQualite = msgArray[3];
 
         if (command = "new") {
 
             if (charRank == "n" || charRank == "a" || charRank == "v" || charRank == "h" || charRank == "l") {
 
-                var arme = border.newArme(charRank);
+                var arme;
 
-                // message.channel.send(arme.type);
-                // message.channel.send(arme.qualite);
+                if (!armeQualite) {
+
+                    arme = border.newArme(charRank);
+
+                    // message.channel.send(arme.type);
+                    // message.channel.send(arme.qualite);
+
+                } else {
+
+                    arme = border.newArme(charRank, armeQualite);
+
+                }
                 message.channel.send("Vous avez trouvé un " + arme.string.fabricant + " !!" +
                     "\n" +
                     "Qualité : " + arme.string.qualite +
@@ -45,7 +56,6 @@ client.on('message', message => {
                     "Fabricant : " + arme.string.fabricant.split(" ")[0] +
                     "\n" +
                     "Nombre d'améliorations : " + arme.value.nbAmeliorations);
-
                 console.log(arme);
 
             } else {

@@ -2,13 +2,13 @@ const random = require('random');
 const each = require('foreach');
 const tables = require('./tables.json');
 
-exports.newArme = function(charRank) {
+exports.newArme = function(charRank, armeQualite = false) {
     var arme = {};
 
     //arme.string => le texte à display
     arme.string = {};
     //arme.value => les string en camelCase pour identification
-    arme.value =  {};
+    arme.value = {};
 
     //type d'arme
     var rand = random.int(1, 20);
@@ -23,13 +23,22 @@ exports.newArme = function(charRank) {
 
     //qualité de l'arme
 
-    rand = random.int(1, 20);
-    each(tables.qualite, function(val, key) {
-        if (rand >= val.value[0] && rand <= val.value[1]) {
-            arme.string.qualite = val.string;
-            arme.value.qualite = key;
-        }
-    });
+    if (!armeQualite) {
+
+
+        rand = random.int(1, 20);
+        each(tables.qualite, function(val, key) {
+            if (rand >= val.value[0] && rand <= val.value[1]) {
+                arme.string.qualite = val.string;
+                arme.value.qualite = key;
+            }
+        });
+
+    } else {
+        arme.string.qualite = tables[armeQualite].string;
+        arme.value.qualite = armeQualite;
+
+    }
 
     //modèle de l'arme
     rand = random.int(1, 20);
